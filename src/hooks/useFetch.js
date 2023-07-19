@@ -28,7 +28,8 @@ const useFetch = (endpoint) => {
     return {
         data,
         isLoading,
-        errorMessage
+        errorMessage,
+        setData
     };
 };
 
