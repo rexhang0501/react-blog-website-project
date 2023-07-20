@@ -18,7 +18,6 @@ const Home = () => {
             });
 
             if(marioBlogs.length === 0){
-                console.log(marioBlogs.length);
                 setMarioBlogsPresent(false);
             }
         }
