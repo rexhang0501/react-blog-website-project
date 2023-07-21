@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Create from './components/Create';
+import BlogDetails from './components/BlogDetails';
 import {
   BrowserRouter,
   Route,
@@ -19,6 +20,9 @@ function App() {
               </Route>
               <Route exact path="/create">
                 <Create />
+              </Route>
+              <Route exact path ="/blogs/:id">
+                <BlogDetails />
               </Route>
             </Switch>
         </div>
