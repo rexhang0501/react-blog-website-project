@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const BlogDetails = () => {
     const {id} = useParams();
-    const {data: blog, isLoading, errorMessage, setData} = useFetch("http://localhost:8000/blogs/" + id);
+    const {data: blog, isLoading, errorMessage} = useFetch("http://localhost:8000/blogs/" + id);
     const history = useHistory();
     const handleDelete = () => {
         fetch("http://localhost:8000/blogs/" + id, 
