@@ -4,11 +4,11 @@ import useFetch from '../hooks/useFetch';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Home = () => {
-    const {data: blogs, isLoading, errorMessage} = useFetch("http://localhost:8000/blogs");
+    const {data: blogs, isLoading, errorMessage} = useFetch("https://my-json-server.typicode.com/rexhang0501/db.json/blogs");
     const [ marioBlogsPresent, setMarioBlogsPresent ] = useState(true);
     const history = useHistory();
     const handleDelete = (id) => {
-        fetch("http://localhost:8000/blogs/" + id, {
+        fetch("https://my-json-server.typicode.com/rexhang0501/db.json/blogs/" + id, {
             method: "DELETE"
         }).then(()=>{
             history.go(0);
