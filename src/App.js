@@ -15,13 +15,13 @@ function App() {
         <Navbar />
         <div className="content">
             <Switch>
-              <Route exact path="react-blog-website-project/">
+              <Route exact path="/react-blog-website-project">
                 <Home />
               </Route>
-              <Route exact path="react-blog-website-project/create">
+              <Route exact path="/react-blog-website-project/create">
                 <Create />
               </Route>
-              <Route exact path ="react-blog-website-project/blogs/:id">
+              <Route exact path ="/react-blog-website-project/blogs/:id">
                 <BlogDetails />
               </Route>
             </Switch>

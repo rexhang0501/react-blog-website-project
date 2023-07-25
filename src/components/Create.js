@@ -20,7 +20,7 @@ const Create = () => {
         }).then(()=>{
             alert("New Blog Added");
             setIsLoading(false);
-            history.push("/");
+            history.push("/react-blog-website-project");
         });
     };
 
