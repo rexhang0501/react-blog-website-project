@@ -1,14 +1,18 @@
 import BlogList from './BlogList';
 import { useState, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Home = () => {
-    const {data: blogs, isLoading, errorMessage, setData} = useFetch("http://localhost:8000/blogs");
+    const {data: blogs, isLoading, errorMessage} = useFetch("http://localhost:8000/blogs");
     const [ marioBlogsPresent, setMarioBlogsPresent ] = useState(true);
+    const history = useHistory();
     const handleDelete = (id) => {
-        setData(blogs.filter((blog)=>{
-            return blog.id !== id;
-        }));
+        fetch("http://localhost:8000/blogs/" + id, {
+            method: "DELETE"
+        }).then(()=>{
+            history.go(0);
+        });
     };
 
     useEffect(()=>{

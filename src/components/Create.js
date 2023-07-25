@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
     const [title, setTitle] = useState("");
@@ -65,9 +65,6 @@ const Create = () => {
                 <button disabled>
                     Adding Blog...
                 </button>}
-                <Link to="/create/author">
-                    <button>Go to Author</button>
-                </Link>
             </form>
         </div>
     );
